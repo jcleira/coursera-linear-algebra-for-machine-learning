@@ -20,12 +20,34 @@ def plot_vectors(list_v, list_label, list_color):
     plt.show()
 
 v = np.array([[1],[3]])
+
+'''
+# Commenting to prevent visualizations
 plot_vectors([v], [f"$v$"], ["black"])
 
 print("Plot vector v plus scalar")
-plot_vectors([v, 2*v, -2*v], [f"$v$", f"$2v$", f"$-2v$"], ["black", "blue", "red"])
+#plot_vectors([v, 2*v, -2*v], [f"$v$", f"$2v$", f"$-2v$"], ["black", "blue", "red"])
 
 w = np.array([[4],[-1]])
 
 print("Plot vector v plus vector w")
-plot_vectors([v, w, v+w], [f"$v$", f"$w$", f"$v+w$"], ["black", "blue", "red"])
+# plot_vectors([v, w, v+w], [f"$v$", f"$w$", f"$v+w$"], ["black", "blue", "red"])
+'''
+
+print("Norm of vector v", np.linalg.norm(v))
+
+def dot(x, y):
+    s=0
+    for xi, yi in zip(x, y):
+        s += xi*yi
+    return s
+
+x = [1, -2, -5]
+y = [4, 3, -1]
+print("Dot product of x and y:", dot(x, y))
+print("Dot product of x and y using numpy:", np.dot(x, y))
+
+x = np.array(x)
+y = np.array(y)
+
+print("Dot product of x and y using numpy:", x @ y)
