@@ -10,7 +10,7 @@ def T(v):
 v = np.array([[3], [5]])
 w = T(v)
 
-print("Original vector:\n", v, "\n\n Result of the transformation:\n", w)
+print("Original vector:\n", v, "\n\n Result of the transformation:\n", w, "\n\n")
 
 u = np.array([[1], [-2]])
 v = np.array([[2], [4]])
@@ -18,4 +18,12 @@ v = np.array([[2], [4]])
 k = 7
 
 print("T(k*v):\n", T(k*v), "\n k*T(v):\n", k*T(v), "\n\n")
-print("T(u+v):\n", T(u+v), "\n T(u)+T(v):\n", T(u)+T(v))
+print("T(u+v):\n", T(u+v), "\n T(u)+T(v):\n", T(u)+T(v), "\n\n")
+
+def L(v):
+    A = np.array([[3, 0], [0, 0], [0, -2]])
+    return A.dot(v)
+
+v = np.array([[3], [5]])
+w = L(v)
+print("Original vector:\n", v, "\n\n Result of the transformation:\n", w, "\n\n")
