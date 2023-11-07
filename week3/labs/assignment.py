@@ -21,7 +21,7 @@ print ('The shape of Y is: ' + str(shape_Y))
 print ('I have m = %d training examples!' % (m))
 
 def layer_sizes(X, Y):
-    n_x = X.shape[0] 
+    n_x = X.shape[0]
     n_y = Y.shape[0]
     return (n_x, n_y)
 
